@@ -5,7 +5,9 @@ description = "Pure CadQuery models of various electronic boards and components.
 authors = ["Seth Fischer <seth@fischer.nz>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.8,<3.11"
+cadquery = {git = "https://github.com/CadQuery/cadquery.git"}
+casadi = "3.5.5"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
