@@ -2,7 +2,37 @@
 name = "cq-electronics"
 version = "0.1.0"
 description = "Pure CadQuery models of various electronic boards and components."
-authors = ["Seth Fischer <seth@fischer.nz>"]
+license = "MIT"
+authors = [
+    "Seth Fischer <seth@fischer.nz>",
+]
+readme = "README.rst"
+homepage = "https://github.com/sethfischer/cq-electronics"
+repository = "https://github.com/sethfischer/cq-electronics.git"
+documentation = "https://cq-electronics.readthedocs.io"
+keywords = [
+    "cadquery",
+    "cq",
+    "cad",
+    "occt",
+    "electronics",
+]
+classifiers = [
+        "Development Status :: 1 - Planning",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Manufacturing",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: MacOS",
+        "Operating System :: POSIX",
+        "Operating System :: Unix",
+        "Programming Language :: Python",
+        "Topic :: Scientific/Engineering",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/sethfischer/cq-electronics/issues"
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.11"
