@@ -2,7 +2,7 @@
 cq-electronics
 ==============
 
-|build-status| |lint-status|
+|build-status| |lint-status| |docs-status|
 
 Pure `CadQuery`_ models of various electronic boards and components.
 
@@ -18,3 +18,6 @@ That is, the major dimensions are accurate and there are enough features to make
 .. |lint-status| image:: https://github.com/sethfischer/cq-electronics/actions/workflows/lint.yml/badge.svg
     :target: https://github.com/sethfischer/cq-electronics/actions/workflows/lint.yml
     :alt: Lint status
+.. |docs-status| image:: https://readthedocs.org/projects/cq-electronics/badge/?version=latest
+    :target: https://cq-electronics.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation status
