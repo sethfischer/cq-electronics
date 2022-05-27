@@ -40,9 +40,19 @@ cadquery = {git = "https://github.com/CadQuery/cadquery.git"}
 casadi = "3.5.5"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
 Sphinx = "^4.5.0"
+black = "^22.3.0"
+doc8 = "^0.11.2"
+flake8 = "^4.0.1"
+flake8-docstrings = "^1.6.0"
+isort = "^5.10.1"
+pytest = "^5.2"
+rstcheck = "^5.0.0"
 sphinx-rtd-theme = "^1.0.0"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
