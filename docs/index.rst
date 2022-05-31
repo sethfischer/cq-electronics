@@ -12,6 +12,7 @@ Table of contents
     :maxdepth: 2
 
     installation.rst
+    connectors/index
     mechanical/index
 
 

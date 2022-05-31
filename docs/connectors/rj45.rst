@@ -1,0 +1,11 @@
+===============
+RJ45 connectors
+===============
+
+.. py:module:: cq_electronics.connectors.rj45
+
+RJ45 modular jack
+-----------------
+
+.. autoclass:: connectors.rj45.JackSurfaceMount
+    :members:
