@@ -14,6 +14,7 @@ Table of contents
     installation.rst
     connectors/index
     mechanical/index
+    smd/index
 
 
 Indices and tables
