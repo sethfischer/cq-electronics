@@ -15,6 +15,7 @@ Table of contents
     connectors/index
     mechanical/index
     smd/index
+    rpi/index
 
 
 Indices and tables
