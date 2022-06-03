@@ -7,5 +7,11 @@ RJ45 connectors
 RJ45 modular jack
 -----------------
 
+.. cadquery:: ../examples/rj45_jack.py
+    :color: #c0c0c0
+
+.. literalinclude:: ../../examples/rj45_jack.py
+    :language: python
+
 .. autoclass:: connectors.rj45.JackSurfaceMount
     :members:

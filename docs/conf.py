@@ -21,6 +21,7 @@ exclude_patterns = []
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx_rtd_theme",
+    "sphinxcadquery.sphinxcadquery",
 ]
 templates_path = ["_templates"]
 
