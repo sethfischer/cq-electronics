@@ -1,4 +1,5 @@
 .venv
 /dist
+CHANGELOG.md
 __pycache__
 docs/_build

@@ -8,3 +8,7 @@ lint: lint-python lint-shell lint-rtd-requirements
 .PHONY: lint-python lint-shell lint-rtd-requirements
 lint-python lint-shell lint-rtd-requirements:
 	./$@.sh
+
+.PHONY: poetry-build
+poetry-build:
+	cz changelog && poetry build

@@ -7,6 +7,9 @@ authors = [
     "Seth Fischer <seth@fischer.nz>",
 ]
 readme = "README.rst"
+include = [
+    "CHANGELOG.md",
+]
 homepage = "https://github.com/sethfischer/cq-electronics"
 repository = "https://github.com/sethfischer/cq-electronics.git"
 documentation = "https://cq-electronics.readthedocs.io"
@@ -51,6 +54,19 @@ rstcheck = "^5.0.0"
 sphinx-rtd-theme = "^1.0.0"
 sphinx-serve = "^1.0.1"
 sphinxcadquery = "^1.3.3"
+commitizen = "^2.27.1"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+tag_format = "$version"
+annotated_tag = true
+version_files = [
+    "docs/conf.py",
+    "src/cq_electronics/__init__.py",
+    "tests/test_cq_electronics.py",
+    "pyproject.toml",
+]
 
 [tool.isort]
 profile = "black"
