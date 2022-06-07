@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -29,3 +31,6 @@ jobs:
         run: |
           sudo apt-get -y install shellcheck
           make lint-shell
+
+      - name: Lint commit messages
+        run: poetry run make lint-commit-messages
