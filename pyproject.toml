@@ -39,7 +39,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.11"
-cadquery = {git = "https://github.com/CadQuery/cadquery.git", rev = "a5fadeb"}
+cadquery = "2.2.0b0"
 casadi = "3.5.5"
 
 [tool.poetry.dev-dependencies]

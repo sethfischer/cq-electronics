@@ -37,7 +37,6 @@ black==22.3.0; python_full_version >= "3.6.2" \
     --hash=sha256:9b542ced1ec0ceeff5b37d69838106a6348e60db7b8fdd245294dc1d26136265 \
     --hash=sha256:bc58025940a896d7e5356952228b68f793cf5fcb342be703c3a2669a1488cb72 \
     --hash=sha256:35020b8886c022ced9282b51b5a875b6d1ab0c387b31a065b84db7c33085ca79
-cadquery @ git+https://github.com/CadQuery/cadquery.git@a5fadeb ; python_version >= "3.8" and python_version < "3.11"
 cadquery-ocp==7.5.3.0; python_version >= "3.8" and python_version < "3.11" \
     --hash=sha256:b9652e906be438b4b5c2d0c55eee237c41e5e3aab214a8d6cd345062287221f9 \
     --hash=sha256:63f265f79999094869a131e642e8494519a6c4fbb927472a0d46a142064a39f2 \
@@ -48,6 +47,9 @@ cadquery-ocp==7.5.3.0; python_version >= "3.8" and python_version < "3.11" \
     --hash=sha256:25de46824a07558e65f99a7e30258515df45dfb508dd847ff263587683b27e9d \
     --hash=sha256:982f0349c8258bfb10a39d71e80de1c7f1589822f7129d619cd4cd3423e5df01 \
     --hash=sha256:326b487f8dea1ef3f9a62810eaa97eba8fb10c6b56c65dc24bcbeba54e764f85
+cadquery==2.2.0b0; python_version >= "3.8" and python_version < "3.11" \
+    --hash=sha256:9e80404bff710f39419c998018d0406d30f9092cd020c86d4987b1c1c322718a \
+    --hash=sha256:45ced34cee8d21947343b43fd17c577601a726c8da9efc4e9e27852faa33eeee
 casadi==3.5.5 \
     --hash=sha256:d4e49cb46404cef61f83b30bb20ec9597c50ae7f55cfd6b89c17facc74675437 \
     --hash=sha256:f08a99e98b0a15083f06b1e221f064a29b3ed9e20617dc55aa8e823f2f732ace \
@@ -230,8 +232,8 @@ nlopt==2.7.1; python_version >= "3.8" and python_version < "3.11" \
     --hash=sha256:087ff54de5ec0375fd18f843b36e9a8590c0f1e194bb45d3119ba844aeb836dd \
     --hash=sha256:b4a05448f0ffebbab7a6a822297430e018c848652280e6efa13484e210291d5c \
     --hash=sha256:757c41210f3ab6173e5c508c79c7833e33cf90a068d098b1e13d277432120b81
-nptyping==2.0.1; python_version >= "3.8" and python_version < "3.11" \
-    --hash=sha256:0fc5c4d76c65e12a77e750b9e2701dab6468d00926c8c4f383867bd70598a532
+nptyping==2.1.1; python_version >= "3.8" and python_version < "3.11" \
+    --hash=sha256:0eab214b5b960b755caa2344a1b2a7ee5e24eee9bfeee955809e413f30cfd593
 numpy==1.22.4; python_version >= "3.8" and python_version < "3.11" \
     --hash=sha256:ba9ead61dfb5d971d77b6c131a9dbee62294a932bf6a356e48c75ae684e635b3 \
     --hash=sha256:1ce7ab2053e36c0a71e7a13a7475bd3b1f54750b4b433adc96313e127b870887 \

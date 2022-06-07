@@ -74,12 +74,11 @@ uvloop = ["uvloop (>=0.15.2)"]
 
 [[package]]
 name = "cadquery"
-version = "2.2.dev467+ga5fadeb"
+version = "2.2.0b0"
 description = "CadQuery is a parametric  scripting language for creating and traversing CAD models"
 category = "main"
 optional = false
 python-versions = ">=3.8,<3.11"
-develop = false
 
 [package.dependencies]
 cadquery-ocp = "*"
@@ -87,19 +86,13 @@ casadi = "*"
 ezdxf = "*"
 multimethod = "*"
 nlopt = "*"
-nptyping = "2.0.1"
+nptyping = ">=2"
 path = "*"
 typish = "*"
 
 [package.extras]
 dev = ["docutils", "ipython", "pytest", "black (==19.10b0)", "click (==8.0.4)"]
 ipython = ["ipython"]
-
-[package.source]
-type = "git"
-url = "https://github.com/CadQuery/cadquery.git"
-reference = "a5fadeb"
-resolved_reference = "a5fadebe72b2a46881c3847cca748b8cf716ccd0"
 
 [[package]]
 name = "cadquery-ocp"
@@ -363,15 +356,15 @@ numpy = ">=1.14"
 
 [[package]]
 name = "nptyping"
-version = "2.0.1"
+version = "2.1.1"
 description = "Type hints for NumPy."
 category = "main"
 optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
-numpy = ">=1.20.0"
-typing-extensions = {version = "*", markers = "python_version < \"3.10\""}
+numpy = ">=1.20.0,<2.0.0"
+typing-extensions = {version = ">=4.0.0,<5.0.0", markers = "python_version < \"3.10\""}
 
 [package.extras]
 build = ["invoke (>=1.6.0)", "pip-tools (>=6.5.0)", "codecov (>=2.1.0)"]
@@ -857,7 +850,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.11"
-content-hash = "70fa8ce9b2e862124424e2da6b89c5c7aeffc32751757c60a3e23a2b40c79ab4"
+content-hash = "78c529ead599fe27f543a8ad457983acc988d9423b774fefacd5602563def35b"
 
 [metadata.files]
 alabaster = [
@@ -905,7 +898,10 @@ black = [
     {file = "black-22.3.0-py3-none-any.whl", hash = "sha256:bc58025940a896d7e5356952228b68f793cf5fcb342be703c3a2669a1488cb72"},
     {file = "black-22.3.0.tar.gz", hash = "sha256:35020b8886c022ced9282b51b5a875b6d1ab0c387b31a065b84db7c33085ca79"},
 ]
-cadquery = []
+cadquery = [
+    {file = "cadquery-2.2.0b0-py3-none-any.whl", hash = "sha256:9e80404bff710f39419c998018d0406d30f9092cd020c86d4987b1c1c322718a"},
+    {file = "cadquery-2.2.0b0.tar.gz", hash = "sha256:45ced34cee8d21947343b43fd17c577601a726c8da9efc4e9e27852faa33eeee"},
+]
 cadquery-ocp = [
     {file = "cadquery_ocp-7.5.3-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:b9652e906be438b4b5c2d0c55eee237c41e5e3aab214a8d6cd345062287221f9"},
     {file = "cadquery_ocp-7.5.3-cp310-cp310-manylinux_2_31_x86_64.whl", hash = "sha256:63f265f79999094869a131e642e8494519a6c4fbb927472a0d46a142064a39f2"},
@@ -1123,7 +1119,7 @@ nlopt = [
     {file = "nlopt-2.7.1-cp39-cp39-win_amd64.whl", hash = "sha256:757c41210f3ab6173e5c508c79c7833e33cf90a068d098b1e13d277432120b81"},
 ]
 nptyping = [
-    {file = "nptyping-2.0.1-py3-none-any.whl", hash = "sha256:0fc5c4d76c65e12a77e750b9e2701dab6468d00926c8c4f383867bd70598a532"},
+    {file = "nptyping-2.1.1-py3-none-any.whl", hash = "sha256:0eab214b5b960b755caa2344a1b2a7ee5e24eee9bfeee955809e413f30cfd593"},
 ]
 numpy = [
     {file = "numpy-1.22.4-cp310-cp310-macosx_10_14_x86_64.whl", hash = "sha256:ba9ead61dfb5d971d77b6c131a9dbee62294a932bf6a356e48c75ae684e635b3"},
