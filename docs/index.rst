@@ -16,6 +16,7 @@ Table of contents
     mechanical/index
     smd/index
     rpi/index
+    contributing
 
 
 Indices and tables
