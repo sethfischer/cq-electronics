@@ -11,7 +11,7 @@ Table of contents
 .. toctree::
     :maxdepth: 2
 
-    installation.rst
+    installation
     connectors/index
     mechanical/index
     smd/index
