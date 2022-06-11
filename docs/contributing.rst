@@ -85,9 +85,9 @@ Documentation
 
 Build the documentation:
 
-    .. code:: text
+.. code:: text
 
-        make -C docs/ html
+    make -C docs/ html
 
 .. note::
 
