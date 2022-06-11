@@ -8,16 +8,24 @@ Development environment
 Poetry
 ~~~~~~
 
-#. Clone and install cq-electronics:
+#. Clone and install cq-electronics.
 
-    .. code:: text
+    a. Clone and install:
 
-        git clone https://github.com/sethfischer/cq-electronics.git
-        cd cq-electronics
-        virrtualenv .venv
-        . .venv/bin/activate
-        python3 -m pip install --upgrade pip
-        poetry install
+        .. code:: text
+
+            git clone https://github.com/sethfischer/cq-electronics.git
+            cd cq-electronics
+            virrtualenv .venv
+            . .venv/bin/activate
+            python3 -m pip install --upgrade pip
+            poetry install
+
+    b. Install Git hooks:
+
+        .. code:: text
+
+            make install-git-hooks
 
 #. Create a new project with cq-electronics installed in editable mode.
 
