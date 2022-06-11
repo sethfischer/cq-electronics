@@ -16,7 +16,7 @@ Poetry
 
             git clone https://github.com/sethfischer/cq-electronics.git
             cd cq-electronics
-            virrtualenv .venv
+            virtualenv .venv
             . .venv/bin/activate
             python3 -m pip install --upgrade pip
             poetry install
@@ -35,7 +35,7 @@ Poetry
 
             mkdir cq-electronics-dev
             cd cq-electronics-dev
-            virrtualenv .venv
+            virtualenv .venv
             . .venv/bin/activate
             python3 -m pip install --upgrade pip
             poetry init
