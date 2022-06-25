@@ -2,7 +2,7 @@
 cq-electronics
 ==============
 
-|build-status| |lint-status| |test-status| |docs-status|
+|pypi-version| |build-status| |lint-status| |test-status| |docs-status|
 
 Pure `CadQuery`_ models of various electronic boards and components.
 
@@ -12,6 +12,9 @@ That is, the major dimensions are accurate and there are enough features to make
 
 .. _`CadQuery`: https://cadquery.readthedocs.io/
 
+.. |pypi-version| image:: https://img.shields.io/pypi/v/cq-electronics
+    :target: https://pypi.org/project/cq-electronics/
+    :alt: PyPi version
 .. |build-status| image:: https://github.com/sethfischer/cq-electronics/actions/workflows/build.yml/badge.svg
     :target: https://github.com/sethfischer/cq-electronics/actions/workflows/build.yml
     :alt: Build status
