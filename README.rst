@@ -10,7 +10,15 @@ These models are intended to be representations rather than detailed models.
 That is, the major dimensions are accurate and there are enough features to make the component recognisable.
 
 
+Related projects
+----------------
+
+* `KiCad Packages3D Generator`_
+
+
 .. _`CadQuery`: https://cadquery.readthedocs.io/
+.. _`KiCad Packages3D Generator`: https://gitlab.com/kicad/libraries/kicad-packages3D-generator
+
 
 .. |pypi-version| image:: https://img.shields.io/pypi/v/cq-electronics
     :target: https://pypi.org/project/cq-electronics/
