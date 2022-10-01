@@ -38,7 +38,7 @@ classifiers = [
 "Bug Tracker" = "https://github.com/sethfischer/cq-electronics/issues"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.11"
+python = ">=3.9,<3.11"
 cadquery = "2.2.0b0"
 casadi = "3.5.5"
 
