@@ -54,7 +54,7 @@ Poetry
             python = ">=3.8,<3.11"
             cq-electronics = {path = "../cq-electronics", develop = true}
 
-            [tool.poetry.dev-dependencies]
+            [tool.poetry.dev.dependencies]
             cq-editor = {git = "https://github.com/CadQuery/CQ-editor"}
             PyQt5 = "^5.15.6"
             spyder = "~=5.0"
