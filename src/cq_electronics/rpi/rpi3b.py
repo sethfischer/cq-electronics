@@ -2,12 +2,7 @@
 
 import cadquery as cq
 
-from cq_electronics.colors import (
-    package_black,
-    pcb_substrate_chiffon,
-    solder_mask_green,
-    tin_plate,
-)
+from cq_electronics.colors import COLORS
 from cq_electronics.connectors.headers import PinHeader
 from cq_electronics.connectors.rj45 import JackSurfaceMount
 from cq_electronics.smd.bga import BGA
@@ -151,26 +146,36 @@ class RPi3b:
         rpi = (
             cq.Assembly()
             .add(
-                substrate, name="pcb_substrate", color=cq.Color(*pcb_substrate_chiffon)
+                substrate,
+                name="pcb_substrate",
+                color=cq.Color(*COLORS["pcb_substrate_chiffon"]),
             )
             .add(
                 solder_mask,
                 name="pcb_solder_mask_top",
-                color=cq.Color(*solder_mask_green),
+                color=cq.Color(*COLORS["solder_mask_green"]),
             )
             .add(
                 solder_mask,
                 name="pcb_solder_mask_bottom",
-                color=cq.Color(*solder_mask_green),
+                color=cq.Color(*COLORS["solder_mask_green"]),
             )
-            .add(ethernet_port, name="ethernet_port", color=cq.Color(*tin_plate))
+            .add(
+                ethernet_port,
+                name="ethernet_port",
+                color=cq.Color(*COLORS["tin_plate"]),
+            )
             .add(
                 bcm2837,
                 name="bcm2837",
-                color=cq.Color(*package_black),
+                color=cq.Color(*COLORS["package_black"]),
             )
-            .add(usb_controller, name="usb_controller", color=cq.Color(*package_black))
-            .add(ram, name="ram", color=cq.Color(*package_black))
+            .add(
+                usb_controller,
+                name="usb_controller",
+                color=cq.Color(*COLORS["package_black"]),
+            )
+            .add(ram, name="ram", color=cq.Color(*COLORS["package_black"]))
             .add(
                 gpio,
                 name="gpio",

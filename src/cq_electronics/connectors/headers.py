@@ -2,7 +2,7 @@
 
 import cadquery as cq
 
-from cq_electronics.colors import black_plastic, gold_plate
+from cq_electronics.colors import COLORS
 
 
 class PinHeader:
@@ -90,8 +90,8 @@ class PinHeader:
 
         pin_elevation = (pin_length / 2) - self.below
 
-        header = cq.Assembly(color=cq.Color(*gold_plate))
-        header.add(base, name="base", color=cq.Color(*black_plastic))
+        header = cq.Assembly(color=cq.Color(*COLORS["gold_plate"]))
+        header.add(base, name="base", color=cq.Color(*COLORS["black_plastic"]))
 
         for row in range(self.rows):
             loc_y = (self.PITCH / 2) + (row * self.PITCH)
