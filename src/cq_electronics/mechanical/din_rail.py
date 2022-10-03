@@ -15,7 +15,7 @@ class TopHat:
     * IEC 60715 – 35 × 7.5
     * IEC 60715 – 35 × 15
 
-    :param depth: Rail height. Typically 7.5 mm or 15 mm. Defaults to 7.5 mm
+    :param depth: Rail height. Typically, 7.5 mm or 15 mm. Defaults to 7.5 mm
     :type depth: float, optional
     """
 
@@ -27,11 +27,19 @@ class TopHat:
     FILLET_RADIUS = 0.25
 
     BRIM_WIDTH = (WIDTH - CHANNEL_WIDTH) / 2
-    BRIM_CUT_POS_X = (WIDTH / 2) - (BRIM_WIDTH / 2) + (THICKNESS / 2)
+    BRIM_CUT_POS_Y = (WIDTH / 2) - (BRIM_WIDTH / 2) + (THICKNESS / 2)
 
-    def __init__(self, depth: float = 7.5):
+    def __init__(self, length: float, depth: float = 7.5):
         """Initialise DIN rail depth."""
+        self.length = length
         self.depth = depth
+
+        self._cq_object = self.make(self.length)
+
+    @property
+    def cq_object(self):
+        """DIN rail."""
+        return self._cq_object
 
     def make(self, length: float) -> cq.Workplane:
         """Make DIN rail and extrude to specified length.
@@ -39,25 +47,25 @@ class TopHat:
         :param length: Rail length.
         :type length: float
 
-        :return: Din rail
+        :return: DIN rail
         :rtype: cadquery.Workplane
         """
         profile = (
             cq.Workplane("ZY")
             .sketch()
-            .rect(self.WIDTH, self.depth)
-            .push([(0, self.THICKNESS / 2)])
-            .rect(self.CHANNEL_WIDTH, self.depth - self.THICKNESS, mode="s")
+            .rect(self.depth, self.WIDTH)
+            .push([(self.THICKNESS / 2, 0)])
+            .rect(self.depth - self.THICKNESS, self.CHANNEL_WIDTH, mode="s")
             .push(
                 [
-                    (-self.BRIM_CUT_POS_X, -self.THICKNESS),
-                    (self.BRIM_CUT_POS_X, -self.THICKNESS),
+                    (-self.THICKNESS, -self.BRIM_CUT_POS_Y),
+                    (-self.THICKNESS, self.BRIM_CUT_POS_Y),
                 ]
             )
-            .rect(self.BRIM_WIDTH - self.THICKNESS, self.depth, mode="s")
+            .rect(self.depth, self.BRIM_WIDTH - self.THICKNESS, mode="s")
             .clean()
             .reset()
-            .vertices("not(>X or <X)")
+            .vertices("not(>Y or <Y)")
             .fillet(self.FILLET_RADIUS)
         )
 

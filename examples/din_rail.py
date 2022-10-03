@@ -2,7 +2,8 @@
 
 from cq_electronics.mechanical.din_rail import TopHat
 
-result = TopHat().make(100)
+top_hat = TopHat(100)
+result = top_hat.cq_object
 
 if "show_object" in locals():
     show_object(result, name="din_rail")
