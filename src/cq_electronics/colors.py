@@ -28,6 +28,11 @@ COLORS = {
         155 / RGB_RANGE,
         0 / RGB_RANGE,
     ],
+    "stainless_steel": [
+        243 / RGB_RANGE,
+        243 / RGB_RANGE,
+        243 / RGB_RANGE,
+    ],
     "tin_plate": [
         135 / RGB_RANGE,
         155 / RGB_RANGE,
