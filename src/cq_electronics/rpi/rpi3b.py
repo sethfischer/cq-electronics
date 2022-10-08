@@ -147,38 +147,38 @@ class RPi3b:
             cq.Assembly()
             .add(
                 substrate,
-                name="pcb_substrate",
+                name="rpi__pcb_substrate",
                 color=cq.Color(*COLORS["pcb_substrate_chiffon"]),
             )
             .add(
                 solder_mask,
-                name="pcb_solder_mask_top",
+                name="rpi__pcb_solder_mask_top",
                 color=cq.Color(*COLORS["solder_mask_green"]),
             )
             .add(
                 solder_mask,
-                name="pcb_solder_mask_bottom",
+                name="rpi__pcb_solder_mask_bottom",
                 color=cq.Color(*COLORS["solder_mask_green"]),
             )
             .add(
                 ethernet_port,
-                name="ethernet_port",
+                name="rpi__ethernet_port",
                 color=cq.Color(*COLORS["tin_plate"]),
             )
             .add(
                 bcm2837,
-                name="bcm2837",
+                name="rpi__bcm2837",
                 color=cq.Color(*COLORS["package_black"]),
             )
             .add(
                 usb_controller,
-                name="usb_controller",
+                name="rpi__usb_controller",
                 color=cq.Color(*COLORS["package_black"]),
             )
-            .add(ram, name="ram", color=cq.Color(*COLORS["package_black"]))
+            .add(ram, name="rpi__ram", color=cq.Color(*COLORS["package_black"]))
             .add(
                 gpio,
-                name="gpio",
+                name="rpi__gpio",
                 loc=cq.Location(
                     cq.Vector(
                         -27, 15.5, (self.THICKNESS + self.SOLDER_MASK_THICKNESS) / 2
@@ -190,72 +190,84 @@ class RPi3b:
         )
 
         rpi = (
-            rpi.constrain("pcb_substrate", "Fixed")
-            .constrain("pcb_solder_mask_top", "FixedRotation", (0, 0, 0))
-            .constrain("pcb_solder_mask_bottom", "FixedRotation", (0, 0, 0))
+            rpi.constrain("rpi__pcb_substrate", "Fixed")
+            .constrain("rpi__pcb_solder_mask_top", "FixedRotation", (0, 0, 0))
+            .constrain("rpi__pcb_solder_mask_bottom", "FixedRotation", (0, 0, 0))
             .constrain(
-                "pcb_substrate?hole_upper", "pcb_solder_mask_top?hole_lower", "Point"
+                "rpi__pcb_substrate?hole_upper",
+                "rpi__pcb_solder_mask_top?hole_lower",
+                "Point",
             )
             .constrain(
-                "pcb_substrate?hole_lower", "pcb_solder_mask_bottom?hole_upper", "Point"
+                "rpi__pcb_substrate?hole_lower",
+                "rpi__pcb_solder_mask_bottom?hole_upper",
+                "Point",
             )
-            .constrain("ethernet_port", "FixedRotation", (0, 0, 90))
+            .constrain("rpi__ethernet_port", "FixedRotation", (0, 0, 90))
             .constrain(
-                "ethernet_port?board_side",
-                "pcb_solder_mask_top@faces@>Z",
+                "rpi__ethernet_port?board_side",
+                "rpi__pcb_solder_mask_top@faces@>Z",
                 "PointInPlane",
             )
             .constrain(
-                "ethernet_port@faces@>X",
-                "pcb_solder_mask_top@faces@>Y",
+                "rpi__ethernet_port@faces@>X",
+                "rpi__pcb_solder_mask_top@faces@>Y",
                 "PointInPlane",
                 param=2.5,
             )
             .constrain(
-                "ethernet_port@faces@<Y",
-                "pcb_solder_mask_top@faces@>X",
+                "rpi__ethernet_port@faces@<Y",
+                "rpi__pcb_solder_mask_top@faces@>X",
                 "PointInPlane",
                 param=-2,
             )
-            .constrain("bcm2837", "FixedRotation", (0, 0, 0))
-            .constrain("bcm2837", "pcb_solder_mask_top@faces@>Z", "PointInPlane")
+            .constrain("rpi__bcm2837", "FixedRotation", (0, 0, 0))
             .constrain(
-                "bcm2837@faces@<Y",
-                "pcb_solder_mask_top@faces@<Y",
+                "rpi__bcm2837", "rpi__pcb_solder_mask_top@faces@>Z", "PointInPlane"
+            )
+            .constrain(
+                "rpi__bcm2837@faces@<Y",
+                "rpi__pcb_solder_mask_top@faces@<Y",
                 "PointInPlane",
                 param=-20,
             )
             .constrain(
-                "bcm2837@faces@>X",
-                "pcb_solder_mask_top@faces@>X",
+                "rpi__bcm2837@faces@>X",
+                "rpi__pcb_solder_mask_top@faces@>X",
                 "PointInPlane",
                 param=-20,
             )
-            .constrain("usb_controller", "FixedRotation", (0, 0, 0))
-            .constrain("usb_controller", "pcb_solder_mask_top@faces@>Z", "PointInPlane")
+            .constrain("rpi__usb_controller", "FixedRotation", (0, 0, 0))
             .constrain(
-                "usb_controller@faces@<Y",
-                "pcb_solder_mask_top@faces@<Y",
+                "rpi__usb_controller",
+                "rpi__pcb_solder_mask_top@faces@>Z",
+                "PointInPlane",
+            )
+            .constrain(
+                "rpi__usb_controller@faces@<Y",
+                "rpi__pcb_solder_mask_top@faces@<Y",
                 "PointInPlane",
                 param=-53,
             )
             .constrain(
-                "usb_controller@faces@>X",
-                "pcb_solder_mask_top@faces@>X",
+                "rpi__usb_controller@faces@>X",
+                "rpi__pcb_solder_mask_top@faces@>X",
                 "PointInPlane",
                 param=-28,
             )
-            .constrain("ram", "FixedRotation", (0, 180, 0))
-            .constrain("ram", "pcb_solder_mask_bottom@faces@<Z", "PointInPlane")
+            .constrain("rpi__ram", "FixedRotation", (0, 180, 0))
             .constrain(
-                "ram@faces@<Y",
-                "pcb_solder_mask_top@faces@<Y",
+                "rpi__ram", "rpi__pcb_solder_mask_bottom@faces@<Z", "PointInPlane"
+            )
+            .constrain(
+                "rpi__ram@faces@<Y",
+                "rpi__pcb_solder_mask_top@faces@<Y",
                 "PointInPlane",
                 param=-37,
             )
             .constrain(
-                "ram@faces@>X",
-                "pcb_solder_mask_top@faces@<X",
+                "rpi__ram@faces@>X",
+                "rpi__pcb_solder_mask_top@faces@<X",
                 "PointInPlane",
                 param=-17,
             )

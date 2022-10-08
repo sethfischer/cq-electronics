@@ -112,12 +112,12 @@ class PiTrayClip:
             cq.Assembly()
             .add(
                 bracket,
-                name="bracket",
+                name="pitray_clip__bracket",
                 color=cq.Color(*COLORS["stainless_steel"]),
             )
             .add(
                 din_clip.cq_object,
-                name="din_clip",
+                name="pitray_clip__din_clip",
                 color=cq.Color(*COLORS["black_plastic"]),
                 loc=cq.Location(cq.Vector(0, 0, din_clip_elevation)),
             )

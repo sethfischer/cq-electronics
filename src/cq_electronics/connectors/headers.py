@@ -91,13 +91,13 @@ class PinHeader:
         pin_elevation = (pin_length / 2) - self.below
 
         header = cq.Assembly(color=cq.Color(*COLORS["gold_plate"]))
-        header.add(base, name="base", color=cq.Color(*COLORS["black_plastic"]))
+        header.add(base, name="header__base", color=cq.Color(*COLORS["black_plastic"]))
 
         for row in range(self.rows):
             loc_y = (self.PITCH / 2) + (row * self.PITCH)
             for column in range(self.columns):
                 loc_x = (self.PITCH / 2) + (column * self.PITCH)
                 location = cq.Location(cq.Vector(loc_x, loc_y, pin_elevation))
-                header.add(pin, name=f"pin_{row}-{column}", loc=location)
+                header.add(pin, name=f"header__pin_{row}-{column}", loc=location)
 
         return header
