@@ -35,7 +35,7 @@ class PinHeader:
         above: float = 7,
         below: float = 3,
         simple: bool = True,
-    ):
+    ) -> None:
         """Initialise pin header."""
         self.rows = rows
         self.columns = columns
@@ -46,11 +46,11 @@ class PinHeader:
         self._cq_object = self._make()
 
     @property
-    def cq_object(self):
+    def cq_object(self) -> cq.Assembly:
         """Pin header."""
         return self._cq_object
 
-    def _make(self) -> cq.Workplane:
+    def _make(self) -> cq.Assembly:
         """Make pin header.
 
         :return: Pin header.

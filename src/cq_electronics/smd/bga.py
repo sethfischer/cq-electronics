@@ -20,7 +20,7 @@ class BGA:
 
     def __init__(
         self, length: float, width: float, height: float = 1, simple: bool = True
-    ):
+    ) -> None:
         """Initialise BGA generic package."""
         self.length = length
         self.width = width
@@ -30,7 +30,7 @@ class BGA:
         self._cq_object = self._make()
 
     @property
-    def cq_object(self):
+    def cq_object(self) -> cq.Workplane:
         """BGA generic package."""
         return self._cq_object
 

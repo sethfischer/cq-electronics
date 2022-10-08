@@ -21,7 +21,7 @@ class JackSurfaceMount:
     #: Length of body without magnetics.
     LENGTH_NON_MAGNETIC = 16
 
-    def __init__(self, length: float = LENGTH_MAGNETIC, simple: bool = True):
+    def __init__(self, length: float = LENGTH_MAGNETIC, simple: bool = True) -> None:
         """Initialise RJ45 modular jack single-port surface-mount."""
         self.length = length
         self.width = 16
@@ -31,7 +31,7 @@ class JackSurfaceMount:
         self._cq_object = self._make()
 
     @property
-    def cq_object(self):
+    def cq_object(self) -> cq.Workplane:
         """RJ45 modular jack single-port surface-mount."""
         return self._cq_object
 

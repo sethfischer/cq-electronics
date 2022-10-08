@@ -20,7 +20,7 @@ class DinClip:
     RAIL_APERTURE_DEPTH = 4
     CORNER_CHAMFER = 3
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialise DIN rail clip."""
         self.half_length = self.LENGTH / 2
         self.rail_aperture_offset = self.half_length - 30
@@ -35,7 +35,7 @@ class DinClip:
         self._cq_object = self._make()
 
     @property
-    def cq_object(self):
+    def cq_object(self) -> cq.Workplane:
         """DIN rail clip."""
         return self._cq_object
 

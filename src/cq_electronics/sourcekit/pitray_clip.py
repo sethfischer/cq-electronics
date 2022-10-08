@@ -22,7 +22,7 @@ class PiTrayClip:
     HEIGHT = 15
     THICKNESS = 1.4
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialise PiTray clip."""
         self.pcb_screw_cylinder_radius = 4.1 / 2
         self.pcb_screw_cylinder_from_edge = 3.7
@@ -54,11 +54,11 @@ class PiTrayClip:
         self._cq_object = self._make()
 
     @property
-    def cq_object(self):
+    def cq_object(self) -> cq.Assembly:
         """Get PiTray clip."""
         return self._cq_object
 
-    def _make(self):
+    def _make(self) -> cq.Assembly:
         """Make PiTray clip."""
         angle = (
             cq.Workplane("ZY")

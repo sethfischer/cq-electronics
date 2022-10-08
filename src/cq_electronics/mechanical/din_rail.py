@@ -29,7 +29,7 @@ class TopHat:
     BRIM_WIDTH = (WIDTH - CHANNEL_WIDTH) / 2
     BRIM_CUT_POS_Y = (WIDTH / 2) - (BRIM_WIDTH / 2) + (THICKNESS / 2)
 
-    def __init__(self, length: float, depth: float = 7.5):
+    def __init__(self, length: float, depth: float = 7.5) -> None:
         """Initialise DIN rail depth."""
         self.length = length
         self.depth = depth
@@ -41,7 +41,7 @@ class TopHat:
         """DIN rail."""
         return self._cq_object
 
-    def _make(self, length: float) -> cq.Workplane:
+    def _make(self, length: float):
         """Make DIN rail and extrude to specified length.
 
         :param length: Rail length.
