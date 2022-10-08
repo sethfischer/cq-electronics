@@ -26,14 +26,15 @@ class BGA:
         self.width = width
         self.height = height
         self.simple = simple
-        self._cq_object = self.make()
+
+        self._cq_object = self._make()
 
     @property
     def cq_object(self):
         """BGA generic package."""
         return self._cq_object
 
-    def make(self) -> cq.Workplane:
+    def _make(self) -> cq.Workplane:
         """Make BGA generic package.
 
         :return: BGA generic package.

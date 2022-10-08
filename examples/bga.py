@@ -2,7 +2,8 @@
 
 from cq_electronics.smd.bga import BGA
 
-result = BGA(20, 20, simple=False).make()
+bga = BGA(20, 20, simple=False)
+result = bga.cq_object
 
 if "show_object" in locals():
     show_object(result, name="bga_package")

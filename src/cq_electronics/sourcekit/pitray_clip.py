@@ -51,14 +51,14 @@ class PiTrayClip:
 
         self.cutout_origin = (-self.WIDTH / 2, -self.HEIGHT / 2 + self.THICKNESS)
 
-        self._cq_object = self.make()
+        self._cq_object = self._make()
 
     @property
     def cq_object(self):
         """Get PiTray clip."""
         return self._cq_object
 
-    def make(self):
+    def _make(self):
         """Make PiTray clip."""
         angle = (
             cq.Workplane("ZY")

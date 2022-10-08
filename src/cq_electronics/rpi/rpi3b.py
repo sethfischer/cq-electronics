@@ -36,7 +36,8 @@ class RPi3b:
         """Initialise Raspberry Pi 3 Model B."""
         self.simple = simple
         self.hole_points = self._pcb_mounting_hole_points()
-        self._cq_object = self.make()
+
+        self._cq_object = self._make()
 
     @property
     def cq_object(self):
@@ -106,7 +107,7 @@ class RPi3b:
 
         return solder_mask
 
-    def make(self) -> cq.Assembly:
+    def _make(self) -> cq.Assembly:
         """Make Raspberry Pi 3 Model B.
 
         :return: Raspberry Pi 3 Model B.
@@ -134,13 +135,13 @@ class RPi3b:
 
         gpio = PinHeader(rows=2, columns=20, simple=self.simple).cq_object
 
-        bcm2837 = BGA(14, 14, simple=self.simple).make()
+        bcm2837 = BGA(14, 14, simple=self.simple).cq_object
         bcm2837.faces("<Z").tag("board_side")
 
-        usb_controller = BGA(9, 9, simple=self.simple).make()
+        usb_controller = BGA(9, 9, simple=self.simple).cq_object
         usb_controller.faces("<Z").tag("board_side")
 
-        ram = BGA(9, 9, simple=self.simple).make()
+        ram = BGA(9, 9, simple=self.simple).cq_object
         ram.faces("<Z").tag("board_side")
 
         rpi = (

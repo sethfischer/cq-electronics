@@ -27,14 +27,15 @@ class JackSurfaceMount:
         self.width = 16
         self.height = 14
         self.simple = simple
-        self._cq_object = self.make()
+
+        self._cq_object = self._make()
 
     @property
     def cq_object(self):
         """RJ45 modular jack single-port surface-mount."""
         return self._cq_object
 
-    def make(self) -> cq.Workplane:
+    def _make(self) -> cq.Workplane:
         """Make RJ45 Jack.
 
         :return: RJ45 Jack.

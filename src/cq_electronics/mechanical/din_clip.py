@@ -32,14 +32,14 @@ class DinClip:
             (-self.half_between_mount_holes, 0),
         ]
 
-        self._cq_object = self.make()
+        self._cq_object = self._make()
 
     @property
     def cq_object(self):
         """DIN rail clip."""
         return self._cq_object
 
-    def make(self) -> cq.Workplane:
+    def _make(self) -> cq.Workplane:
         """Make DIN rail clip."""
         result = (
             cq.Workplane()

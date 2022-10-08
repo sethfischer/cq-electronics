@@ -34,14 +34,14 @@ class TopHat:
         self.length = length
         self.depth = depth
 
-        self._cq_object = self.make(self.length)
+        self._cq_object = self._make(self.length)
 
     @property
     def cq_object(self):
         """DIN rail."""
         return self._cq_object
 
-    def make(self, length: float) -> cq.Workplane:
+    def _make(self, length: float) -> cq.Workplane:
         """Make DIN rail and extrude to specified length.
 
         :param length: Rail length.

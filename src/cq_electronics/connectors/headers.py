@@ -42,14 +42,15 @@ class PinHeader:
         self.above = above
         self.below = below
         self.simple = simple
-        self._cq_object = self.make()
+
+        self._cq_object = self._make()
 
     @property
     def cq_object(self):
         """Pin header."""
         return self._cq_object
 
-    def make(self) -> cq.Workplane:
+    def _make(self) -> cq.Workplane:
         """Make pin header.
 
         :return: Pin header.
