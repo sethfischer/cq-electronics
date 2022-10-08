@@ -2,7 +2,7 @@
 
 import cadquery as cq
 
-from cq_electronics.colors import COLORS
+from cq_electronics.materials import COLORS
 
 
 class PinHeader:

@@ -2,9 +2,9 @@
 
 import cadquery as cq
 
-from cq_electronics.colors import COLORS
 from cq_electronics.connectors.headers import PinHeader
 from cq_electronics.connectors.rj45 import JackSurfaceMount
+from cq_electronics.materials import COLORS
 from cq_electronics.smd.bga import BGA
 
 

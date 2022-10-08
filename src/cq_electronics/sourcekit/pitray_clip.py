@@ -2,8 +2,8 @@
 
 import cadquery as cq
 
-from cq_electronics.colors import COLORS
 from cq_electronics.fasteners import M2R5_TAP_HOLE_DIAMETER, M4_TAP_HOLE_DIAMETER
+from cq_electronics.materials import COLORS
 from cq_electronics.mechanical.din_clip import DinClip
 from cq_electronics.rpi.rpi3b import RPi3b
 
