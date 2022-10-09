@@ -15,8 +15,12 @@ class TopHat:
     * IEC 60715 – 35 × 7.5
     * IEC 60715 – 35 × 15
 
-    :param depth: Rail height. Typically, 7.5 mm or 15 mm. Defaults to 7.5 mm
-    :type depth: float, optional
+    :param length: Rail length.
+    :type length: float
+    :param depth: Rail height. Typically, 7.5 mm or 15 mm.
+    :type depth: float, optional, Defaults to 7.5 mm.
+    :param slots: Add mounting slots.
+    :type slots: bool, optional, Defaults to True.
     """
 
     #: Width of rail.
@@ -29,23 +33,21 @@ class TopHat:
     BRIM_WIDTH = (WIDTH - CHANNEL_WIDTH) / 2
     BRIM_CUT_POS_Y = (WIDTH / 2) - (BRIM_WIDTH / 2) + (THICKNESS / 2)
 
-    def __init__(self, length: float, depth: float = 7.5) -> None:
+    def __init__(self, length: float, depth: float = 7.5, slots: bool = True) -> None:
         """Initialise DIN rail depth."""
         self.length = length
         self.depth = depth
+        self.slots = slots
 
-        self._cq_object = self._make(self.length)
+        self._cq_object = self._make()
 
     @property
-    def cq_object(self):
+    def cq_object(self) -> cq.Workplane:
         """DIN rail."""
         return self._cq_object
 
-    def _make(self, length: float):
+    def _make(self) -> cq.Workplane:
         """Make DIN rail and extrude to specified length.
-
-        :param length: Rail length.
-        :type length: float
 
         :return: DIN rail
         :rtype: cadquery.Workplane
@@ -69,4 +71,37 @@ class TopHat:
             .fillet(self.FILLET_RADIUS)
         )
 
-        return profile.finalize().extrude(length)
+        result: cq.Workplane = profile.finalize().extrude(self.length)
+
+        if self.slots:
+            result = self._add_slots(result)
+
+        return result
+
+    def _add_slots(self, extrusion: cq.Workplane) -> cq.Workplane:
+        """Add mounting slots."""
+        slot_width = 4.5
+        slot_length = 25
+        between_slots = 10
+        between_slot_centers = slot_length + between_slots
+
+        center = -self.length / 2
+        slot_locations = [(center, 0)]
+
+        x_coordinate = center + between_slot_centers
+        y_coordinate = 0
+        while x_coordinate < 0:
+            slot_locations.append((x_coordinate, y_coordinate))
+            slot_locations.append((center - abs(center - x_coordinate), y_coordinate))
+
+            x_coordinate += between_slot_centers
+
+        result = (
+            extrusion.faces(">Z")
+            .workplane()
+            .pushPoints(slot_locations)
+            .slot2D(slot_length, slot_width, 0)
+            .cutThruAll()
+        )
+
+        return result
