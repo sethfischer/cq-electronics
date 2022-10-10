@@ -14,7 +14,7 @@ sys.path.insert(0, source_files_path)
 project = "CadQuery Electronics"
 release = "0.1.0"
 author = "Seth Fischer"
-copyright = f"{date.today().year}, {author}"
+project_copyright = f"{date.today().year}, {author}"
 
 
 exclude_patterns = []
