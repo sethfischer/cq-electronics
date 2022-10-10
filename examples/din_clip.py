@@ -6,4 +6,4 @@ din_clip = DinClip()
 result = din_clip.cq_object
 
 if "show_object" in locals():
-    show_object(result, name="din_clip")
+    show_object(result, name="din_clip")  # noqa: F821

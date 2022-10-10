@@ -6,4 +6,4 @@ bga = BGA(20, 20, simple=False)
 result = bga.cq_object
 
 if "show_object" in locals():
-    show_object(result, name="bga_package")
+    show_object(result, name="bga_package")  # noqa: F821
