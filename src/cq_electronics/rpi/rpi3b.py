@@ -1,7 +1,5 @@
 """Raspberry Pi 3 Model B."""
 
-from typing import List, Tuple
-
 import cadquery as cq
 
 from cq_electronics.connectors.headers import PinHeader
@@ -46,7 +44,7 @@ class RPi3b:
         """Raspberry Pi 3 Model B assembly."""
         return self._cq_object
 
-    def _pcb_mounting_hole_points(self) -> List[Tuple[float, float]]:
+    def _pcb_mounting_hole_points(self) -> list[tuple[float, float]]:
         """Calculate PCB mounting hole locations."""
         offset = -self.WIDTH / 2 + self.HOLE_OFFSET_FROM_EDGE + self.HOLE_CENTERS_LONG
 
