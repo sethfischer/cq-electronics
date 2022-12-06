@@ -39,8 +39,9 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.11"
-cadquery = "2.2.0b0"
-casadi = "3.5.5"
+cadquery = { version = "^2.2.0b2", allow-prereleases = true }
+cadquery-ocp = { version = "^7.6.3a0", allow-prereleases = true }
+casadi = { version = "^3.5.6pre2", allow-prereleases = true }
 
 [tool.poetry.group.dev.dependencies]
 Sphinx = "^4.5.0"
