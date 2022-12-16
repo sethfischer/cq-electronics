@@ -3,6 +3,6 @@
 from cq_electronics import __version__
 
 
-def test_version():
+def test_version() -> None:
     """Test version string."""
     assert __version__ == "0.1.0"
