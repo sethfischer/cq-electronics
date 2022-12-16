@@ -6,4 +6,4 @@ jack = JackSurfaceMount(simple=False)
 result = jack.cq_object
 
 if "show_object" in locals():
-    show_object(result, name="rj45_jack")  # noqa: F821
+    show_object(result, name="rj45_jack")  # type: ignore[name-defined] # noqa: F821

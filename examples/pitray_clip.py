@@ -6,4 +6,4 @@ pitray_clip = PiTrayClip()
 result = pitray_clip.cq_object
 
 if "show_object" in locals():
-    show_object(result, name="pitray_clip")  # noqa: F821
+    show_object(result, name="pitray_clip")  # type: ignore[name-defined] # noqa: F821

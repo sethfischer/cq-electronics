@@ -6,4 +6,4 @@ rpi = RPi3b(simple=False)
 result = rpi.cq_object
 
 if "show_object" in locals():
-    show_object(result, name="rpi_3b")  # noqa: F821
+    show_object(result, name="rpi_3b")  # type: ignore[name-defined] # noqa: F821
