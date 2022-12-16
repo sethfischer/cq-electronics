@@ -2,8 +2,10 @@
 
 import cadquery as cq
 
+from cq_electronics.cq_containers import CqWorkplaneContainer
 
-class BGA:
+
+class BGA(CqWorkplaneContainer):
     """BGA generic package.
 
     Ball grid array (BGA) surface-mount packaging.
@@ -28,11 +30,6 @@ class BGA:
         self.simple = simple
 
         self._cq_object = self._make()
-
-    @property
-    def cq_object(self) -> cq.Workplane:
-        """BGA generic package."""
-        return self._cq_object
 
     def _make(self) -> cq.Workplane:
         """Make BGA generic package.

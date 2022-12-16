@@ -2,10 +2,11 @@
 
 import cadquery as cq
 
+from cq_electronics.cq_containers import CqAssemblyContainer
 from cq_electronics.materials import COLORS
 
 
-class PinHeader:
+class PinHeader(CqAssemblyContainer):
     """Straight pin header.
 
     :param rows: Number of pin rows.
@@ -44,11 +45,6 @@ class PinHeader:
         self.simple = simple
 
         self._cq_object = self._make()
-
-    @property
-    def cq_object(self) -> cq.Assembly:
-        """Pin header."""
-        return self._cq_object
 
     def _make(self) -> cq.Assembly:
         """Make pin header.

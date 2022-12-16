@@ -2,6 +2,7 @@
 
 import cadquery as cq
 
+from cq_electronics.cq_containers import CqWorkplaneContainer
 from cq_electronics.fasteners import (
     M4_CLEARANCE_NORMAL_DIAMETER,
     M4_COUNTERSINK_DIAMETER,
@@ -10,7 +11,7 @@ from cq_electronics.fasteners import (
 from cq_electronics.mechanical.din_rail import TopHat
 
 
-class DinClip:
+class DinClip(CqWorkplaneContainer):
     """Plastic DIN rail clip."""
 
     LENGTH = 76
@@ -33,11 +34,6 @@ class DinClip:
         ]
 
         self._cq_object = self._make()
-
-    @property
-    def cq_object(self) -> cq.Workplane:
-        """DIN rail clip."""
-        return self._cq_object
 
     def _make(self) -> cq.Workplane:
         """Make DIN rail clip."""

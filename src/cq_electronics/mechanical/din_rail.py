@@ -2,8 +2,10 @@
 
 import cadquery as cq
 
+from cq_electronics.cq_containers import CqWorkplaneContainer
 
-class TopHat:
+
+class TopHat(CqWorkplaneContainer):
     """Top hat DIN rail.
 
     :Standard:
@@ -40,11 +42,6 @@ class TopHat:
         self.slots = slots
 
         self._cq_object = self._make()
-
-    @property
-    def cq_object(self) -> cq.Workplane:
-        """DIN rail."""
-        return self._cq_object
 
     def _make(self) -> cq.Workplane:
         """Make DIN rail and extrude to specified length.

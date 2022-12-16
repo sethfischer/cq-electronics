@@ -1,8 +1,10 @@
 """RJ45 connectors."""
 import cadquery as cq
 
+from cq_electronics.cq_containers import CqWorkplaneContainer
 
-class JackSurfaceMount:
+
+class JackSurfaceMount(CqWorkplaneContainer):
     """RJ45 modular jack single-port surface-mount.
 
     :Connector Type:
@@ -29,11 +31,6 @@ class JackSurfaceMount:
         self.simple = simple
 
         self._cq_object = self._make()
-
-    @property
-    def cq_object(self) -> cq.Workplane:
-        """RJ45 modular jack single-port surface-mount."""
-        return self._cq_object
 
     def _make(self) -> cq.Workplane:
         """Make RJ45 Jack.

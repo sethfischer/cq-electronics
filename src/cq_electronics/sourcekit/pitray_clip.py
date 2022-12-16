@@ -2,13 +2,14 @@
 
 import cadquery as cq
 
+from cq_electronics.cq_containers import CqAssemblyContainer
 from cq_electronics.fasteners import M2R5_TAP_HOLE_DIAMETER, M4_TAP_HOLE_DIAMETER
 from cq_electronics.materials import COLORS
 from cq_electronics.mechanical.din_clip import DinClip
 from cq_electronics.rpi.rpi3b import RPi3b
 
 
-class PiTrayClip:
+class PiTrayClip(CqAssemblyContainer):
     """Sourcekit PiTray clip.
 
     :Manufacturer:
@@ -24,6 +25,8 @@ class PiTrayClip:
 
     def __init__(self) -> None:
         """Initialise PiTray clip."""
+        self._name = "pitray_clip"
+
         self.pcb_screw_cylinder_radius = 4.1 / 2
         self.pcb_screw_cylinder_from_edge = 3.7
         self.pcb_screw_cylinder_length = 5.5
@@ -52,11 +55,6 @@ class PiTrayClip:
         self.cutout_origin = (-self.WIDTH / 2, -self.HEIGHT / 2 + self.THICKNESS)
 
         self._cq_object = self._make()
-
-    @property
-    def cq_object(self) -> cq.Assembly:
-        """Get PiTray clip."""
-        return self._cq_object
 
     def _make(self) -> cq.Assembly:
         """Make PiTray clip."""
@@ -112,12 +110,12 @@ class PiTrayClip:
             cq.Assembly()
             .add(
                 bracket,
-                name="pitray_clip__bracket",
+                name=self.sub_assembly_name("bracket"),
                 color=cq.Color(*COLORS["stainless_steel"]),
             )
             .add(
                 din_clip.cq_object,
-                name="pitray_clip__din_clip",
+                name=self.sub_assembly_name("din_clip"),
                 color=cq.Color(*COLORS["black_plastic"]),
                 loc=cq.Location(cq.Vector(0, 0, din_clip_elevation)),
             )
