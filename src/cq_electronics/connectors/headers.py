@@ -35,6 +35,7 @@ class PinHeader(CqAssemblyContainer):
         columns: int = 1,
         above: float = 7,
         below: float = 3,
+        *,
         simple: bool = True,
     ) -> None:
         """Initialise pin header."""

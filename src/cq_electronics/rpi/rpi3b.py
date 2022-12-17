@@ -33,7 +33,7 @@ class RPi3b(CqAssemblyContainer):
     HOLE_OFFSET_FROM_EDGE = 3.5
     HOLE_CENTERS_LONG = 58
 
-    def __init__(self, simple: bool = True) -> None:
+    def __init__(self, *, simple: bool = True) -> None:
         """Initialise Raspberry Pi 3 Model B."""
         self.simple = simple
         self.hole_points = self._pcb_mounting_hole_points()

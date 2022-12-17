@@ -21,7 +21,7 @@ class BGA(CqWorkplaneContainer):
     """
 
     def __init__(
-        self, length: float, width: float, height: float = 1, simple: bool = True
+        self, length: float, width: float, height: float = 1, *, simple: bool = True
     ) -> None:
         """Initialise BGA generic package."""
         self.length = length
