@@ -20,7 +20,7 @@ Install from Git main branch:
 
     poetry add git+https://github.com/sethfischer/cq-electronics.git
 
-Install from :abbr:`PyPi (Python Package Index)`:
+Install from :abbr:`PyPI (Python Package Index)`:
 
 .. code:: text
 
@@ -36,7 +36,7 @@ Install from Git main branch:
 
     python -m pip install git+https://github.com/sethfischer/cq-electronics.git
 
-Install from :abbr:`PyPi (Python Package Index)`:
+Install from :abbr:`PyPI (Python Package Index)`:
 
 .. code:: text
 
