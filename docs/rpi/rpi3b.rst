@@ -7,8 +7,7 @@ Raspberry Pi 3
 Raspberry Pi 3 Model B
 ----------------------
 
-.. literalinclude:: ../../examples/raspberry_pi_3b.py
-    :language: python
+.. cadquery-vtk:: ../examples/raspberry_pi_3b.py
 
 .. autoclass:: rpi.rpi3b.RPi3b
     :members:
