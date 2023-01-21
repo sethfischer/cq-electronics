@@ -5,6 +5,9 @@ CadQuery Electronics
 Pure `CadQuery`_ models of various electronic boards and components.
 
 
+.. cadquery-vtk:: ../examples/raspberry_pi_3b.py
+
+
 Table of contents
 -----------------
 

@@ -7,8 +7,7 @@ PyTray Clip
 PyTray Clip
 -----------
 
-.. literalinclude:: ../../examples/pitray_clip.py
-    :language: python
+.. cadquery-vtk:: ../examples/pitray_clip.py
 
 .. autoclass:: sourcekit.pitray_clip.PiTrayClip
     :members:

@@ -20,7 +20,7 @@ project_copyright = f"{date.today().year}, {author}"
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx_rtd_theme",
-    "sphinxcadquery.sphinxcadquery",
+    "sphinxcontrib.cadquery",
 ]
 templates_path = ["_templates"]
 
