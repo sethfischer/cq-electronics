@@ -536,14 +536,14 @@ files = [
 
 [[package]]
 name = "ipython"
-version = "8.8.0"
+version = "8.9.0"
 description = "IPython: Productive Interactive Computing"
 category = "dev"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "ipython-8.8.0-py3-none-any.whl", hash = "sha256:da01e6df1501e6e7c32b5084212ddadd4ee2471602e2cf3e0190f4de6b0ea481"},
-    {file = "ipython-8.8.0.tar.gz", hash = "sha256:f3bf2c08505ad2c3f4ed5c46ae0331a8547d36bf4b21a451e8ae80c0791db95b"},
+    {file = "ipython-8.9.0-py3-none-any.whl", hash = "sha256:9c207b0ef2d276d1bfcfeb9a62804336abbe4b170574ea061500952319b1d78c"},
+    {file = "ipython-8.9.0.tar.gz", hash = "sha256:71618e82e6d59487bea059626e7c79fb4a5b760d1510d02fab1160db6fdfa1f7"},
 ]
 
 [package.dependencies]
@@ -555,7 +555,7 @@ jedi = ">=0.16"
 matplotlib-inline = "*"
 pexpect = {version = ">4.3", markers = "sys_platform != \"win32\""}
 pickleshare = "*"
-prompt-toolkit = ">=3.0.11,<3.1.0"
+prompt-toolkit = ">=3.0.30,<3.1.0"
 pygments = ">=2.4.0"
 stack-data = "*"
 traitlets = ">=5"
@@ -1482,14 +1482,14 @@ test = ["pytest"]
 
 [[package]]
 name = "sphinxcontrib-cadquery"
-version = "0.3.0"
+version = "0.4.0"
 description = "Sphinx extension for rendering CadQuery models."
 category = "dev"
 optional = false
 python-versions = ">=3.9,<3.11"
 files = [
-    {file = "sphinxcontrib_cadquery-0.3.0-py3-none-any.whl", hash = "sha256:8d97baf6217bc6689986327ed43bf3c08fcef548572545f34f57601610ec835a"},
-    {file = "sphinxcontrib_cadquery-0.3.0.tar.gz", hash = "sha256:88b052f0cb6bd5a0ab0b570f80f521fa1a49ef43ec7b8372292dec530f3fea11"},
+    {file = "sphinxcontrib_cadquery-0.4.0-py3-none-any.whl", hash = "sha256:cf62081069daa22fb9c7e3f88800d5f11af51520a83135424e499574cd68368c"},
+    {file = "sphinxcontrib_cadquery-0.4.0.tar.gz", hash = "sha256:73d5cb67dbb93972242e0e7aff1a26d474f5d5eb1cf56948eff981cc907a292c"},
 ]
 
 [package.dependencies]
@@ -1776,4 +1776,4 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.11"
-content-hash = "83b20455594dbe1db05e2d47abeaee550c949c2460824240759f0c0d92b99b5e"
+content-hash = "3de1c974400811c6c8129acedc23767f03a342950e836e4bb8ce8570f339647f"
