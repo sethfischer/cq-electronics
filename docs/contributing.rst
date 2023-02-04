@@ -5,77 +5,35 @@ Contributing
 Development environment
 -----------------------
 
-#. Clone and install cq-electronics.
+#. Clone and install:
 
-    a. Clone and install:
+    .. code:: text
 
-        .. code:: text
+        git clone https://github.com/sethfischer/cq-electronics.git
+        cd cq-electronics
+        python3.9 -m venv .venv
+        . .venv/bin/activate
+        pip install -U pip
+        poetry install
 
-            git clone https://github.com/sethfischer/cq-electronics.git
-            cd cq-electronics
-            python3.9 -m venv .venv
-            . .venv/bin/activate
-            pip install -U pip
-            poetry install
+#. Install Git hooks:
 
-    b. Install Git hooks:
+    .. code:: text
 
-        .. code:: text
+        make install-git-hooks
 
-            make install-git-hooks
+#. Install CQ-editor:
 
-#. Create a new project with cq-electronics installed in develop mode.
+    .. code:: text
 
-    a. Create new project:
+        poetry install --with cq-editor
 
-        .. code:: text
+#. Open examples from the ``examples`` directory with CQ-editor:
 
-            mkdir cq-electronics-dev
-            cd cq-electronics-dev
-            python3.9 -m venv .venv
-            . .venv/bin/activate
-            pip install -U pip
-            poetry init
+    .. code:: text
 
-        In ``pyproject.toml`` specify relative path to cq-electronics:
+        cq-editor examples/raspberry_pi_3b.py
 
-        .. code:: toml
-
-            [tool.poetry]
-            name = "cq-electronics-dev"
-            version = "0.1.0"
-            description = "Development project for cq-electronics"
-            authors = ["name <email>"]
-
-            [tool.poetry.dependencies]
-            python = ">=3.9,<3.11"
-            cq-electronics = { path = "../cq-electronics", develop = true }
-
-            [tool.poetry.group.dev.dependencies]
-            cq-editor = { git = "https://github.com/CadQuery/CQ-editor" }
-            Logbook = "^1.5.3"
-            PyQt5 = "^5.15.6"
-            path = "^16.4.0"
-            pyqtgraph = "^0.12.4"
-            requests = "^2.27.1"
-            spyder = "~=5.0"
-
-            [build-system]
-            requires = ["poetry-core>=1.0.0"]
-            build-backend = "poetry.core.masonry.api"
-
-    b. Install dependencies, including ``../cq-electronics``:
-
-        .. code:: text
-
-            poetry install
-
-    c. Copy examples from the ``examples`` directory and open with CQ-editor:
-
-        .. code:: text
-
-            cp ../cq-electronics/examples/*.py ./
-            cq-editor raspberry_pi_3b.py
 
 Documentation
 -------------
@@ -85,7 +43,3 @@ Build the documentation:
 .. code:: text
 
     make -C docs/ clean html
-
-
-.. _`sphinxcadquery`: https://pypi.org/project/sphinxcadquery/
-.. _`sphinx-serve`: https://pypi.org/project/sphinx-serve/
