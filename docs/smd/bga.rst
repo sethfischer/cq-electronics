@@ -7,7 +7,7 @@ BGA packages
 BGA
 ---
 
-.. cadquery:: ../examples/bga.py
+.. cadquery-vtk:: ../examples/bga.py
 
 .. autoclass:: cq_electronics.smd.bga.BGA
     :members:

@@ -9,7 +9,7 @@ Generic DIN rail clips.
 Plastic DIN clip
 ----------------
 
-.. cadquery:: ../examples/din_clip.py
+.. cadquery-vtk:: ../examples/din_clip.py
 
 .. autoclass:: mechanical.din_clip.DinClip
     :members:
