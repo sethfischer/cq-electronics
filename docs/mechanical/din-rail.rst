@@ -7,7 +7,7 @@ DIN rails
 Top hat
 -------
 
-.. cadquery:: ../examples/din_rail.py
+.. cadquery-vtk:: ../examples/din_rail.py
 
 .. autoclass:: mechanical.din_rail.TopHat
     :members:
