@@ -1,0 +1,6 @@
+[installer]
+# disable modern installation due to:
+#  AssertionError
+#  In cadquery_ocp-7.7.0a0-cp39-cp39-manylinux_2_31_x86_64.whl,
+#  LICENSES_bundled.txt is not mentioned in RECORD
+modern-installation = false
