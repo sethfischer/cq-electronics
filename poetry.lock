@@ -3439,14 +3439,14 @@ test = ["pytest"]
 
 [[package]]
 name = "sphinxcontrib-cadquery"
-version = "0.6.0"
+version = "0.7.0"
 description = "Sphinx extension for rendering CadQuery models."
 category = "dev"
 optional = false
 python-versions = ">=3.9,<3.11"
 files = [
-    {file = "sphinxcontrib_cadquery-0.6.0-py3-none-any.whl", hash = "sha256:039d5cd4262dbe85e71005856f1b1fbe3665fcb91431ad03dba6706ffbcf7491"},
-    {file = "sphinxcontrib_cadquery-0.6.0.tar.gz", hash = "sha256:e80a9401ded1c3db2a80d3b8bfb84a9e31e33dac75e26a8df811ab2c6dac4fe2"},
+    {file = "sphinxcontrib_cadquery-0.7.0-py3-none-any.whl", hash = "sha256:a3cc8459343f651ca9f820e150b1704baa89f5a3c042bbe0398d1bb5fabd84f5"},
+    {file = "sphinxcontrib_cadquery-0.7.0.tar.gz", hash = "sha256:63e93f5e28a8b8529c62275863e61181a3366adea243a957941c4563d7babf94"},
 ]
 
 [package.dependencies]
@@ -4190,4 +4190,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.11"
-content-hash = "631e2a4e16a0180cef30e0e29b04f4ee45d0890101b7eeda16ed84d2cea2973a"
+content-hash = "40270866e65aa6a4e2002b5c58feaea6ef4ffb41ef249d68348f475eb82680c8"
