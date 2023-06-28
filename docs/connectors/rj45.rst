@@ -7,7 +7,11 @@ RJ45 connectors
 RJ45 modular jack
 -----------------
 
-.. cadquery-vtk:: ../examples/rj45_jack.py
+.. cadquery:vtk::
+
+    RJ45 modular jack.
+
+    .. literalinclude:: ../../examples/rj45_jack.py
 
 .. autoclass:: connectors.rj45.JackSurfaceMount
     :members:

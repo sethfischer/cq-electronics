@@ -7,7 +7,12 @@ DIN rails
 Top hat
 -------
 
-.. cadquery-vtk:: ../examples/din_rail.py
+.. cadquery:vtk::
+    :color: 0.7, 0.7, 0.7, 1
+
+    DIN rail (IEC 60715 – 35 × 7.5 mm).
+
+    .. literalinclude:: ../../examples/din_rail.py
 
 .. autoclass:: mechanical.din_rail.TopHat
     :members:
