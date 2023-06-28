@@ -7,7 +7,11 @@ Raspberry Pi 3
 Raspberry Pi 3 Model B
 ----------------------
 
-.. cadquery-vtk:: ../examples/raspberry_pi_3b.py
+.. cadquery:vtk::
+
+    Raspberry Pi 3 Model B.
+
+    .. literalinclude:: ../../examples/raspberry_pi_3b.py
 
 .. autoclass:: rpi.rpi3b.RPi3b
     :members:

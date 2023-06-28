@@ -7,7 +7,11 @@ PyTray Clip
 PyTray Clip
 -----------
 
-.. cadquery-vtk:: ../examples/pitray_clip.py
+.. cadquery:vtk::
+
+    Sourcekit® PiTray clip.
+
+    .. literalinclude:: ../../examples/pitray_clip.py
 
 .. autoclass:: sourcekit.pitray_clip.PiTrayClip
     :members:
