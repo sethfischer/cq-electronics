@@ -297,13 +297,13 @@ css = ["tinycss2 (>=1.1.0,<1.2)"]
 
 [[package]]
 name = "cadquery"
-version = "2.2.0"
+version = "2.3.1"
 description = "CadQuery is a parametric  scripting language for creating and traversing CAD models"
 optional = false
-python-versions = ">=3.8,<3.11"
+python-versions = ">=3.8"
 files = [
-    {file = "cadquery-2.2.0-py3-none-any.whl", hash = "sha256:92855894e618192c1106f87a75569f464478074a635921c9b5cd415b66a3e17b"},
-    {file = "cadquery-2.2.0.tar.gz", hash = "sha256:94cc1d72bdfa9d2885b3d05b63e34cf4da8076f78e1276d210ab7eae8aaae2b0"},
+    {file = "cadquery-2.3.1-py3-none-any.whl", hash = "sha256:2bdd3cc37639c5a9485d394d081334769c2b9e2fee6a42c0ca53e64fd9ff6a8d"},
+    {file = "cadquery-2.3.1.tar.gz", hash = "sha256:eb28dfe8e003fc0663391d1d8f51bf5dab091facdded46cfb3d919676eefcd36"},
 ]
 
 [package.dependencies]
@@ -3995,4 +3995,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.11"
-content-hash = "5d3c4523a5d98d6b2296d382d18137905ba38a3868d4ba2cd604bc84862ab486"
+content-hash = "fdf931f90b98e3eb8708774b85fb5d6aa56cfb451da02e25378de1d1ae4a66de"
