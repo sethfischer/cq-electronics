@@ -46,8 +46,8 @@ casadi = {version = "^3.5.6rc2", allow-prereleases = true}
 
 [tool.poetry.group.dev.dependencies]
 Sphinx = "^6.2.1"
-black = "^23.3.0"
-commitizen = "^3.2.2"
+black = "^24.2.0"
+commitizen = "^3.14.1"
 doc8 = "^0.11.2"
 flake8 = "^5.0.0"
 flake8-docstrings = "^1.6.0"

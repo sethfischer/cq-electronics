@@ -4,7 +4,7 @@ import os
 import sys
 from datetime import date
 
-import sphinx_rtd_theme  # type: ignore[import] # noqa: F401
+import sphinx_rtd_theme  # type: ignore[import-untyped] # noqa: F401
 
 cq_electronics_path = os.path.dirname(os.path.abspath(os.getcwd()))
 source_files_path = os.path.join(cq_electronics_path, "src/cq_electronics")
