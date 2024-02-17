@@ -1,4 +1,5 @@
 """RJ45 connectors."""
+
 import cadquery as cq
 
 from cq_electronics.cq_containers import CqWorkplaneContainer
