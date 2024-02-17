@@ -40,7 +40,8 @@ classifiers = [
 [tool.poetry.dependencies]
 python = ">=3.9,<3.11"
 
-cadquery = "^2.3.1"
+cadquery = "^2.4.0"
+cadquery-ocp = "7.7.0"
 casadi = {version = "^3.5.6rc2", allow-prereleases = true}
 
 [tool.poetry.group.dev.dependencies]
