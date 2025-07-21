@@ -38,10 +38,10 @@ classifiers = [
 "Bug Tracker" = "https://github.com/sethfischer/cq-electronics/issues"
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.12"
+python = ">=3.9,<3.14"
 
 cadquery = "^2.4.0"
-cadquery-ocp = "7.7.0"
+cadquery-ocp = "7.7.2"
 casadi = {version = "^3.5.6rc2", allow-prereleases = true}
 
 [tool.poetry.group.dev.dependencies]
@@ -57,7 +57,7 @@ pytest = "^7.2.0"
 rstcheck = "^6.1.1"
 sphinx-rtd-theme = "^1.0.0"
 sphinx-serve = "^1.0.1"
-sphinxcontrib-cadquery = "^0.8.1"
+sphinxcontrib-cadquery = "^0.10.1"
 
 [tool.poetry.group.cq-editor]
 optional = true

@@ -11,9 +11,9 @@ Development environment
 
         git clone https://github.com/sethfischer/cq-electronics.git
         cd cq-electronics
-        poetry env use python3.11
+        poetry env use python3.12
         poetry install
-        poetry shell
+        eval $(poetry env activate)
 
 #. Install Git hooks:
 
