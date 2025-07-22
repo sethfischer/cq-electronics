@@ -12,7 +12,7 @@ sys.path.insert(0, source_files_path)
 
 
 project = "CadQuery Electronics"
-release = "0.1.0"
+release = "0.2.0"
 author = "Seth Fischer"
 project_copyright = f"{date.today().year}, {author}"
 

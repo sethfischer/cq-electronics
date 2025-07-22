@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cq-electronics"
-version = "0.1.0"
+version = "0.2.0"
 description = "Pure CadQuery models of various electronic boards and components."
 license = "MIT"
 authors = [
@@ -71,7 +71,7 @@ spyder = "^5.4.2"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.1.0"
+version = "0.2.0"
 annotated_tag = true
 major_version_zero = true
 tag_format = "$version"
