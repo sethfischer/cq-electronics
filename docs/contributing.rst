@@ -42,3 +42,15 @@ Build the documentation:
 .. code:: text
 
     make -C docs/ clean html
+
+
+Publish release
+---------------
+
+.. code-block:: text
+
+    git checkout main
+    cz bump --no-verify
+    git push origin main && git push --tags
+    make poetry-build
+    poetry publish
